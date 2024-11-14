@@ -10,11 +10,15 @@ class habbit_card extends StatelessWidget {
   Widget build(BuildContext context) {
     // late List<Map<String, Object>> habbitList;
     var habbitList = [
-      {"title": "drinking water", "icon": Icon(Icons.water_drop_rounded ,color: Colors.pink)},
-      {"title": "Floss", "icon": Icon(EvaIcons.archive , color: Colors.pink)}
+      {
+        "title": "drinking water",
+        "icon": Icon(Icons.water_drop_rounded, color: Colors.pink)
+      },
+      {"title": "Floss", "icon": Icon(EvaIcons.archive, color: Colors.pink)}
     ];
 
     return GridView.count(
+      physics: const NeverScrollableScrollPhysics(),
       mainAxisSpacing: 10,
       padding: EdgeInsets.zero,
       crossAxisCount: 3,
@@ -59,13 +63,13 @@ class habbit_card extends StatelessWidget {
           onTap: () {
             showModalBottomSheet(
               isDismissible: true,
-              backgroundColor:Color.fromARGB(255, 49, 49, 49),
+              backgroundColor: Color.fromARGB(255, 49, 49, 49),
               context: context,
               builder: (context) {
                 return Container(
-                  margin: EdgeInsets.only(bottom:10),
+                  margin: EdgeInsets.only(bottom: 10),
                   child: ListView(
-                    shrinkWrap: true, 
+                    shrinkWrap: true,
                     children: habbitList
                         .map(
                           (habbits) => Padding(
@@ -79,8 +83,11 @@ class habbit_card extends StatelessWidget {
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        Text(habbits["title"] as String , style: TextStyle(color: Colors.white),),
-                                        habbits['icon'] as Icon ,
+                                        Text(
+                                          habbits["title"] as String,
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        habbits['icon'] as Icon,
                                       ],
                                     ),
                                   ),
@@ -134,7 +141,7 @@ class MyHabbits extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               decoration: const BoxDecoration(
-                color: Colors.black,
+                color: Color.fromARGB(255, 19, 21, 22),
                 shape: BoxShape.circle,
               ),
               child: Padding(

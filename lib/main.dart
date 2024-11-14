@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color.fromARGB(255, 49, 49, 49)),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0)),
       home: const MyHomePage(title: 'YOU CAN!'),
     );
   }
@@ -36,7 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       extendBodyBehindAppBar: false,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 49, 49, 49),
+        centerTitle: false,
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         title: Text(
           widget.title,
           style: const TextStyle(color: Color.fromARGB(255, 230, 230, 230)),

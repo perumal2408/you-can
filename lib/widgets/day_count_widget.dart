@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class DayCount extends StatelessWidget {
@@ -8,11 +7,11 @@ class DayCount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
+    return Stack(
+      // mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          width: 250,
+          width: double.infinity,
           height: 200,
           padding: const EdgeInsets.all(10),
           child: Center(
@@ -21,15 +20,25 @@ class DayCount extends StatelessWidget {
               child: const CircularProgressIndicator(
                 color: Colors.pink,
                 value: 0.2,
-                backgroundColor: Colors.black,
+                backgroundColor: Color.fromARGB(255, 19, 21, 22),
                 strokeWidth: 10,
               ),
             ),
           ),
         ),
-        const Text(
-          "21 days to go",
-          style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 221, 221, 221)),
+        Container(
+          height: 200,
+          alignment: Alignment.center,
+          child: Text(
+            "21",
+            textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 60,
+              color: Colors.pink.withOpacity(0.8),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ],
     );
