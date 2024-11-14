@@ -48,8 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           DayCount(),
-          Expanded(child: habbit_card(),),
-          calendar_widget()
+          CalendarWidget(),
+          Expanded(child: HabbitCard(),),
+          
         ],
       ),
     );

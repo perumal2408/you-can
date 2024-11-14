@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 
-class habbit_card extends StatelessWidget {
-  const habbit_card({
+class HabbitCard extends StatelessWidget {
+  const HabbitCard({
     super.key,
   });
 
@@ -12,9 +12,9 @@ class habbit_card extends StatelessWidget {
     var habbitList = [
       {
         "title": "drinking water",
-        "icon": Icon(Icons.water_drop_rounded, color: Colors.pink)
+        "icon": const Icon(Icons.water_drop_rounded, color: Colors.pink)
       },
-      {"title": "Floss", "icon": Icon(EvaIcons.archive, color: Colors.pink)}
+      {"title": "Floss", "icon": const Icon(EvaIcons.archive, color: Colors.pink)}
     ];
 
     return GridView.count(
@@ -63,11 +63,11 @@ class habbit_card extends StatelessWidget {
           onTap: () {
             showModalBottomSheet(
               isDismissible: true,
-              backgroundColor: Color.fromARGB(255, 49, 49, 49),
+              backgroundColor: const Color.fromARGB(255, 223, 89, 133),
               context: context,
               builder: (context) {
                 return Container(
-                  margin: EdgeInsets.only(bottom: 10),
+                  margin: const EdgeInsets.only(bottom: 10),
                   child: ListView(
                     shrinkWrap: true,
                     children: habbitList
@@ -75,7 +75,7 @@ class habbit_card extends StatelessWidget {
                           (habbits) => Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Card(
-                              color: const Color.fromARGB(255, 0, 0, 0),
+                              color:const Color.fromARGB(255, 19, 21, 22),
                               child: Center(
                                 child: Center(
                                   child: Padding(
@@ -85,7 +85,7 @@ class habbit_card extends StatelessWidget {
                                       children: [
                                         Text(
                                           habbits["title"] as String,
-                                          style: TextStyle(color: Colors.white),
+                                          style: const TextStyle(color: Colors.white),
                                         ),
                                         habbits['icon'] as Icon,
                                       ],
